@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+</head>
+<body>
+
+<form  action="js.html" method="post">
+   <div class="name q1">
+    <label>Name</label>
+</div>
+<div>
+    <input type="text" id="name" name="student_name">
+</div> 
+   <div class="email q1">
+    <label>email</label>
+</div>
+<div>
+    <input type="email" id="mail" name="student_email">
+</div> 
+   <div class="password q1">
+    <label>password</label>
+</div>
+<div>
+    <input type="password" id="password" name="student_password">
+</div>
+   <input type="radio" id="under_16" value="under_16" name="user_age"><label for="under_16" class="light">Under 16</label>
+   <input type="radio" id="over_16" value="over_16" name="user_age"><label for="over_16" class="light">16 or Older</label>
+
+
+
+<h2>Your profile</h2>
+
+<label for="bio">Biography</label>
+
+    <textarea id="bio" name="student_bio"></textarea>
+    <label for="courses">Select Courses </label>
+
+    <select id="courses" name="student_courses">
+        <optgroup label="Engineering">
+    <option value="computer_engineering">Computer Science enginerering</option>
+    <option value="slecrtical_engineering">Electrical enginerering</option>
+    <option value="mechanical_engineering">Mechanical enginerering</option>
+    <option value="civil_engineering">Civil enginerering</option>
+</optgroup>
+    <optgroup label="Management"> 
+        <option value="finance_management"> Finance Management</option>
+        <option value="tecnology_management"> Technology Management</option>
+        <option value="marketing_management"> Marketing Management</option>
+        <option value="business_management"> Business Management</option>
+
+</optgroup>
+</select>
+
+<label> Interests:</label>
+
+<iput type="checkbox" id="engineering" value="interest_engineering" name="user_interest"><label class="light" for="engineering">Engineering</label><br>
+
+<iput type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label></br>
+<input type="checkbox" id="law" value="interest_law" name="user_interest"><label class="light" for="law">Law</label>
+
+
+<button type="submit">Submit</button>
+
+
+</form>
+<style type="text/css">
+    .q1{
+        padding-top: 13px;
+    }
+</style>
+    <script type="text/javascript">
+    </script>
+</body>
+</html>
