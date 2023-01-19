@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>Denis Novik</title>
+</head>
+
+
+<body>
+    <header id="header" class="header">
+
+        <div class="header-btn container">
+            <a href="#!"><span></span></a>
+        </div>
+        <div id="navbar" class="header-nav container">
+            <ul>
+                <li>
+                    <a href="#header" class="go_to">Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="go_to">About me</a>
+                </li>
+                <li>
+                    <a href="#skills" class="go_to">Skills</a>
+                </li>
+                <li>
+                    <a href="#portfolio" class="go_to">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#footer" class="go_to">Contacts</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-desc container">
+            <h1 class="header-title">Denis Novik
+            </h1>
+            <h3 class="header-subtitle">UX | UI designer <br> 24 years old, Minsk</h3>
+            <ul>
+                <li>
+                    <a href="#!">RU</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="#!">ENG</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header_wrapper-img">
+            <div class="header-img container"></div>
+        </div>
+
+    </header>
+    <section id="about" class="about container">
+        <h2 class="title">About me</h2>
+        <p>Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design and everything connected with it.
+        </p>
+        <p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
+        <p>Ready to implement excellent projects <br> with wonderful people.</p>
+    </section>
+    <section id="skills" class="skills container">
+        <h2 class="title">Skills</h2>
+        <p class="skills_subtitle">I work in such programs as</p>
+        <div class="skills_wrapper">
+            <div class="skills_programs">
+                <img src="./img/skills/photoshop.png" alt="" class="skills_programs-img">
+                <small>Adobe <br> photoshop</small>
+                <div class="skills_star-rating">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-grey.png" alt="star img">
+                </div>
+            </div>
+            <div class="skills_programs">
+                <img src="./img/skills/AI.png" alt="" class="skills_programs-img">
+                <small>Adobe <br>
+                    Illustrator</small>
+                <div class="skills_star-rating">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-grey.png" alt="star img">
+                    <img src="./img/skills/Star-grey.png" alt="star img">
+                </div>
+            </div>
+            <div class="skills_programs">
+                <img src="./img/skills/AE.png" alt="" class="skills_programs-img">
+                <small>Adobe <br>
+                    After Effects</small>
+                <div class="skills_star-rating">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-grey.png" alt="star img">
+                </div>
+            </div>
+            <div class="skills_programs">
+                <img src="./img/skills/Figma.png" alt="" class="skills_programs-img">
+                <small>Figma</small>
+                <div class="skills_star-rating">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-black.png" alt="star img">
+                    <img src="./img/skills/Star-grey.png" alt="star img">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="portfolio ">
+        <h2 class="title">Portfolio</h2>
+        <div class="portfolio_item">
+            <img src="./img/portfolio-img1.jpg" alt="">
+            <a href="#!" class="pirtfolio_item-link">Online fashion store - Homepage</a>
+        </div>
+        <div class="portfolio_item">
+            <img src="./img/portfolio-img2.jpg" alt="">
+            <a href="#!" class="pirtfolio_item-link">Reebok Store - Concept</a>
+        </div>
+        <div class="portfolio_item">
+            <img src="./img/portfolio-img3.jpg" alt="">
+            <a href="#!" class="pirtfolio_item-link">Braun Landing Page - Concept</a>
+        </div>
+    </section>
+    <footer id="footer" class="footer container">
+        <h2 class="title">Contacts</h2>
+        <p class="footer_subtitle">Want to know more or just chat? You are welcome!</p>
+        <div class="footer_btn"><a href="#!">Send message</a></div>
+        <div class="footer_social-links">
+            <a href="#!"><i class="icon-linkedin"></i></a>
+            <a href="#!"><i class="icon-instagram"></i></a>
+            <a href="#!"><i class="icon-behance"></i></a>
+            <a href="#!"><i class="icon-dribble"></i></a>
+        </div>
+        <small>Like me on <br>
+            LinkedIn, Instagram, Behance, Dribble
+        </small>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./js/nav-btn.min.js"></script>
+    <script src="./js/sticky-nav.min.js"></script>
+    <script src="./js/nav-menu.min.js"></script>
+</body>

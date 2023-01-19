@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript" src="./jquery-3.6.1.min.js"></script>
+<script>
+
+
+        function Calc(num_a, num_b){
+            this.num_a = num_a;
+            this.num_b = num_b;
+            this.setNumber = function() {
+                let newNumberA = prompt("Введите число a", );
+                let newNumberB = prompt("Введите число b", );
+            };
+            this.getNumber = function (num_a, num_b) {
+                return this.num_a + this.num_b;
+            };
+            this.summ = function(){
+                let summNumber = this.num_a + this.num_b;
+                return ("Сумма чисел равна: " + summNumber);
+            };
+            this.razn = function(){
+                let raznNumber = this.num_a - this.num_b;
+                return ("Разность чисел равна: " + raznNumber);
+            };
+            this.ymn = function(){
+                let ymnNumber = this.num_a * this.num_b;
+                return ("Умножение чисел равно: " + ymnNumber);
+            };
+            this.del = function(){
+                let delNumber = this.num_a / this.num_b;
+                return ("Деление чисел равно: " + delNumber);
+            };
+        }
+
+        let calc1 = new Calc(25,2);
+
+        calc1.getNumber(1,1);
+
+
+        console.log(calc1.setNumber());
+        console.log(calc1.getNumber());
+
+        console.log(calc1.summ());
+        console.log(calc1.razn());
+        console.log(calc1.ymn());
+        console.log(calc1.del());
+</script>
+</body>
+</html>

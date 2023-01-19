@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+
+<body>
+    <form action="#" method="post" class="form">
+        <div class="wrap_form">
+            <h2>Калькулятор</h2>
+            <div class="style_text">
+                <select id="user_method" name="" class="wrap_form">
+                    <optgroup label="Операции">
+                        <option value="sum">Сумма</option>
+                        <option value="ras">Разность</option>
+                        <option value="mnoj">Умножение</option>
+                        <option value="del">Деление</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="style_text">
+                <label for="znach">Введите a</label>
+                <input type="number" id="number_a" class="input_stng" value="">
+            </div>
+            <div class="style_text">
+                <label for="znach">Введите b</label>
+                <input type="number" id="number_b" class="input_stng" value="">
+            </div>
+
+            <div class="style_text">
+                <button type="reset">Сброс</button>
+            </div>
+
+            <button type="submit" class="btn_complate" id="complate">Расчитать</button>
+
+
+            <div class="style_text">
+                <label for="p">Ответ</label>
+                <p id="otvet" class=""></p>
+            </div>
+
+
+            <div class="style_text">
+                <label for="histor">История</label>
+                <a id="histori"></a>
+            </div>
+        </div>
+    </form>
+    <style type="text/css">
+    .form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wrap_width {
+        width: 290px;
+    }
+
+    .wrap_form {
+        width: 300px;
+        background-color: whitesmoke;
+    }
+
+    .style_text {
+        margin-top: 15px;
+    }
+    </style>
+    <script type="text/javascript" src="./jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        $('reset_btn').click(function(){
+            document.getElementById('number_a, number_b').reset()
+        })
+        $('#complate').click(function(e){
+            e.preventDefault();
+            console.log($(this));
+            let number_a = Number($('#number_a').val());
+            let number_b = Number($('#number_b').val());
+            let value = $('#user_method').val();
+            console.log(value)
+            switch(value){
+                case 'sum':
+                    let sum = number_a + number_b
+                    $('#otvet').html(sum);
+                    $('#histori').html(sum);
+                    break
+                case 'ras':
+                    let ras = number_a - number_b
+                    $('#otvet').html(sum);
+                    break
+                case 'mnoj':
+                    let mnoj = number_a * number_b
+                    $('#otvet').html(mnoj);
+                    break
+                case 'del':
+                    let del = number_a / number_b
+                    $('#otvet').html(del);
+                    break 
+            }
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	function User(cabinet, student, courses) {
+		this.cabinet = cabinet;
+		this.student = student;
+		this.courses = courses;
+		// Кабинет
+		this.getCabinet = function() {
+			return("Кабинет " + this.cabinet)
+		};
+		this.setCabinet = function() {
+			newCabinet = prompt("Укажите ваш кобинет")
+			this.cabinet = newCabinet;
+			return "Кабинет изменен"
+		};
+		this.setCabinettext = function(cabinet){
+			this.cabinet = cabinet;
+			return cabinet
+		};
+
+		//Колво студентов
+		this.getStudent = function() {
+			return("Кабинет " + this.student)
+		};
+		this.setStudent = function() {
+			newStudent = prompt("Укажите количество студентов")
+			this.student = newStudent;
+			return "Изменено количество студентов"
+		};
+		this.setStudenttext = function(student){
+			this.student = student;
+			return student
+		};
+		
+		//количество курсов
+		this.getCourses = function() {
+			return("Кабинет " + this.courses)
+		};
+		this.setCourses = function() {
+			newCourses = prompt("Укажите количество Курсов")
+			this.courses = newCourses;
+			return "Изменено количество Курсов"
+		};
+		this.setCoursestext = function(courses){
+			this.courses = courses;
+			return courses
+		};
+	};
+	
+	let isp9201 = new User("203", "18", "5");
+	let pcs9201 = new User("222", "30", "6");
+	let sio9201 = new User("303", "11", "3");
+	let buh9201 = new User("201", "33", "7");
+	let dio9201 = new User("202", "16", "4");
+
+	console.log(isp9201.getCabinet());
+	console.log(isp9201.setCabinet());
+	console.log(isp9201.setCabinettext(205));
+	// Это кабинет ИСП
+	console.log(isp9201.getStudent());
+	console.log(isp9201.setStudent());
+	console.log(isp9201.setStudenttext(20));
+	// Это количество студентов ИСП
+	console.log(isp9201.getCourses());
+	console.log(isp9201.setCourses());
+	console.log(isp9201.setCoursestext(6));
+	// Это количество курсов ИСП
+
+	console.log(pcs9201.getCabinet());
+	console.log(pcs9201.setCabinet());
+	console.log(pcs9201.setCabinettext(222));
+	// Это кабинет PCS
+	console.log(pcs9201.getStudent());
+	console.log(pcs9201.setStudent());
+	console.log(pcs9201.setStudenttext(21));
+	// Это количество студентов PCS
+	console.log(pcs9201.getCourses());
+	console.log(pcs9201.setCourses());
+	console.log(pcs9201.setCoursestext(8));
+	// Это количество курсов PCS
+
+	console.log(sio9201.getCabinet());
+	console.log(sio9201.setCabinet());
+	console.log(sio9201.setCabinettext(211));
+	// Это кабинет SIO
+	console.log(sio9201.getStudent());
+	console.log(sio9201.setStudent());
+	console.log(sio9201.setStudenttext(24));
+	// Это количество студентов SIO
+	console.log(sio9201.getCourses());
+	console.log(sio9201.setCourses());
+	console.log(sio9201.setCoursestext(2));
+	// Это количество курсов SIO
+
+	console.log(buh9201.getCabinet());
+	console.log(buh9201.setCabinet());
+	console.log(buh9201.setCabinettext(323));
+	// Это кабинет BUH
+	console.log(buh9201.getStudent());
+	console.log(buh9201.setStudent());
+	console.log(buh9201.setStudenttext(34));
+	// Это количество студентов BUH
+	console.log(buh9201.getCourses());
+	console.log(buh9201.setCourses());
+	console.log(buh9201.setCoursestext(1));
+	// Это количество курсов BUH
+
+	console.log(dio9201.getCabinet());
+	console.log(dio9201.setCabinet());
+	console.log(dio9201.setCabinettext(311));
+	// Это кабинет DIO
+	console.log(dio9201.getStudent());
+	console.log(dio9201.setStudent());
+	console.log(dio9201.setStudenttext(43));
+	// Это количество студентов DIO
+	console.log(dio9201.getCourses());
+	console.log(dio9201.setCourses());
+	console.log(dio9201.setCoursestext(2));
+	// Это количество курсов DIO
+
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="all">
+		<form method="post">
+			<div class="numbers">
+				<input name="number1" type="number" id="i1" placeholder="число">
+				<input name="number2" type="number" id="i2" placeholder="число">
+				<input name="number3" type="number3" id="i3" placeholder="число">
+			</div>
+
+			<div class="button">
+				<input type="button" value="сложение" id="btn1">
+			</div>
+
+			<div class="button1">
+				<input type="button" value="вычетание" id="btn2">
+			</div>
+
+			<div class="button2">
+				<input type="button" value="умножение" id="btn3">
+			</div>
+
+			<div class="button3">
+				<input type="button" value="деление" id="btn4">
+			</div>
+
+			<div class="button4">
+				<input type="button" value="дискрименант" id="btn5">
+			</div>
+			<div class="answer">
+				<p id="text">ответ</p>
+			</div>
+		</form>
+	</div>
+	<script src="jquery-3.6.1.min.js"></script>
+	<script>
+		$("#btn1").click(function(e){
+			e.preventDefault();
+			a = number_input("#i1")
+			b = number_input("#i2")
+			result = a + b;
+			$("#text").html (a + '+' + b + "=" + result);
+		})
+		$("#btn2").click(function(e){
+			e.preventDefault();
+			a = number_input("#i1")
+			b = number_input("#i2")
+			result = a - b;
+			$("#text").html(a + '-' + b + "=" + result);
+		})
+		$("#btn3").click(function(e){
+			e.preventDefault();
+			a = number_input("#i1")
+			b = number_input("#i2")
+			result = a * b;
+			$("#text").html(a + '*' + b + "=" + result);
+		})
+		$("#btn1").click(function(e){
+			e.preventDefault();
+			a = number_input("#i1")
+			b = number_input("#i2")
+			result = a / b;
+			$("#text").html(a + '/' + b + "=" + result);
+		})
+		$("btn5").click(function(e){
+			e.preventDefault();
+			a = number_input("i1")
+			b = number_input("i2")
+			c = number_input("i3")
+			disc = b * b - (4 * a * c);
+			console.log(disc);
+			if (disc === 0) {
+				x1 = -b + Math.sqrt(disc) / 2 * a;
+				x2 = -b + Math.sqrt(disc) / 2 * a;
+				result = "x1= " + x1 + ", x2 = " + x2;
+			}else if(disc > 0){
+				result = 'eee';
+			}
+			else if(disc < 0){
+				x = "нет корней";
+				result = x
+			}
+			$("#text").html("Ответ " + result)
+		})
+		
+		// function discrimenant(a,b,c){
+
+		// 	let otvet = $('#otvet');
+		// 	let result;
+
+		// 	let discr = b * b - 4 * a *c;
+		// 	result = "Дискрименант равен:"+discr + "<br>";
+		// 	if(discr > 0){
+		// 		let x1 = (-b + Math.sqrt(discr))/(2 * a);
+		// 		let x2 = (-b - Math.sqrt(discr))/(2 * a);
+		// 		result += "равняется:" + x1 + "<br>" + "X2 равняется:" + x2;
+		// 	}else if (discr == 0){
+		// 		x = -(b / (2*a))
+		// 		result += "X равен:" + x + "<br>"
+		// 	}else if(discr < 0){
+		// 		result +="Нет действительных корней" + "<br>"
+		// 	}
+		// 	return otvet.html(result)
+		// }
+
+		// $(".button4").click(function(e){
+		// 	e.preventDefault();
+		// 	let numberA = $('#number_a').val();
+		// 	let numberB = $('#number_b').val();
+		// 	let numberC = $('#number_c').val();
+
+		// 	console.log(numberA + numberB + numberC)
+
+		// 	discrimenant(numberA, numberB, numberC)
+		// })
+	</script>
+</body>
+</html>

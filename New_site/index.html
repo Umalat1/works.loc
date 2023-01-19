@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Фщрмы</title>
+</head>
+<body>
+	<div class="profile">
+		<div class="wrap">
+			<form action="#" method="post">
+
+				<h2>Your basis info</h2>
+
+				<div class="info">
+					<label for="name" class="header">Name</label>
+					<input type="text" id="name" name="student_name">
+				</div>
+
+				<div class="info">
+					<label for="mail" class="header">Email</label>
+					<input type="email" id="mail" name="student_email">
+				</div>
+
+				<div class="info">
+					<label for="password" class="header">Password</label>
+					<input type="password" id="password" name="student_password">
+				</div>
+
+				<label class="header">Age</label>
+				<div class="years">
+					<input type="radio" id="under_16" value="under_16" name="user_age">
+					<label for="under_16" class="light">	Under 16</label><br>
+				</div>
+				<div class="years">
+ 			    	<input type="radio" id="over_16" value="over_16" name="user_age">
+ 			    	<label for="over_16" class="light">	16 or Older</label>
+ 			    </div>
+				<h2>Your profile</h2>
+
+				<div class="biograhy">
+					<label for="bio" class="header">Biograhy</label>
+					<textarea id="bio" name="student_bio"></textarea>
+				</div>
+
+				<div class="select">
+					<label for="courses" class="header">Select courses</label>
+					<select id="courses" name="student_courses">
+			
+						<optgroup label="Engineering">
+							
+							<option value="computer_engineering">Computer Sciense</option>
+							<option value="slectrical_engineering">Electrical</option>
+							<option value="mechanical_engineering">Mechanical</option>
+							<option value="civil_engineering">Civil</option>
+							<option value="chemical_engineering">Chemical</option>
+			
+						</optgroup>
+						<optgroup label="Management">
+							
+							<option value="finanse_management">Finanse Management</option>
+							<option value="tehnology_management">Tehnology</option>
+							<option value="marceting_management">Marceting</option>
+							<option value="business_management">Business</option>
+						</optgroup>
+			
+					</select>
+				</div>
+
+				<label class="header">Interests:</label>
+				<div class="interests">
+ 			    	<input type="checkbox" id="engineering" value="interest_engineering" name="user_interest">
+ 			    	<label class="light" for="engineering">Engineering</label><br>
+ 			    </div>
+ 			    <div class="interests">
+ 			     	<input type="checkbox" id="business" value="interest_business" name="user_interest">
+ 			    	<label class="light" for="business">Business</label><br>
+ 			    </div>
+ 			    <div class="interests">
+ 			    	<input type="checkbox" id="law" value="interest_law" name="user_interest">
+ 			    	<label class="light" for="law">Law</label>
+ 			    </div>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+	<style type="text/css">
+		.wrap{
+			width: 177px;
+		}
+		.info label, input{
+			display: block;
+		}
+		.info{
+			margin-top: 20px;
+		}
+		.years{
+			display: flex;
+			margin-top: 5px;
+		}
+		.biograhy label, textarea{
+			display: block;
+		}
+		.select label, select{
+			display: block;
+		}
+		.select{
+			margin-top: 20px;
+		}
+		.interests{
+			display: flex;
+			margin-top: 5px;
+		}
+		.header{
+			font-size: 16px;
+			margin-top: 20px;
+		}
+	</style>
+</body>
+</html>

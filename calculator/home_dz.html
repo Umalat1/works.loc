@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript" src="jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	//let ISP9201 = {
+		// courses: 5,
+		// Numberstudents: 18,
+		// TuitionFees: 40000,
+		// rating: 4.9,
+		// socialrating: 5,
+		// TotalHours: 400,
+		// middleAge: 18,
+		// profActiv: "PC Magic",
+		// attend: 5,
+		// office: 203,
+		// tutor: "Анатолий",
+		// tutorSecondName:"Васильевичь",
+	// 	dohod(){
+	// 		let dohod = this.Numberstudents * this.TuitionFees;
+	// 		return dohod;
+	// 	},
+	// 	budget(){
+	// 		let allbudget = this.dohod() / this.TotalHours;
+	// 		return allbudget;
+	// 	},
+	// 	migrate(){
+	// 		let sredRate = (this.rating + this.socialrating) / 2;
+	// 		return sredRate;
+	// 	},
+	// 	averagearrival(){
+	// 		let sredPos = (this.attend + this.Numberstudents) / 2;
+	// 		return sredPos;
+	// 	},
+	// 	sumhover(){
+	// 		let tuitionFeeshovers = (this.TuitionFees / this.TotalHours);
+	// 		return tuitionFeeshovers;
+	// 	},
+	// 	sus(){
+	// 		let among = (this.Numberstudents * 100) / this.TuitionFees;
+	// 		return among;
+	// 	},
+	// 	allSumm(){
+	// 		let summ = this.courses * this.TuitionFees;
+	// 		return summ;
+	// 	},
+	// 	student(){
+	// 		let all = this.Numberstudents * 200000;
+	// 		return all;
+	// 	},
+	// 	student(){
+	// 		let all = this.Numberstudents * 200000;
+	// 		return all;
+	// 	},
+	// };
+	// console.log(ISP9201.dohod());
+	// console.log(ISP9201.migrate());
+	// console.log(ISP9201.averagearrival());
+	// console.log(ISP9201.sumhover());
+	// console.log(ISP9201.sus());
+	// console.log(ISP9201.allSumm());
+	// console.log(ISP9201.student());
+	// console.log(ISP9201.budget());
+
+	// user = {
+	// 	name: "Умалат",
+	// 	vozrvst: 18,
+	// 	city: "Ставрополь",
+
+	// 	info(){
+	// 		let student = " Привет меня завут " + this.name + " Мне " + this.vozrvst + " лет " + "Я живу в " + this.city;
+	// 		return student;
+	// 	},
+	// };
+	// piple = {
+	// 	name: "Андрей",
+	// 	vozrvst: 19,
+	// 	city: "Махачкала",
+
+	// 	info(){
+	// 		let student = " Привет меня завут " + this.name + " Мне " + this.vozrvst + " лет " + " Я живу в " + this.city;
+	// 		return student;
+	// 	},
+	// };
+	// 	console.log(user.info());
+	// 	console.log(piple.info());
+	function User(name, age, city) {
+		this.name = name;
+		this.age = age;
+		this.city = city;
+
+		this.getName = function() {
+			return( "Меня завут " + this.name);
+		};
+
+		this.getAge = function() {
+			return( "Мне " + this.age);
+		};
+		this.getCity = function() {
+			return( "Я живу " + this.city);
+		};
+		this.setNametext = function(name){
+			this.name = name;
+		};
+		this.setName = function(){
+			newName = prompt("Введите свое имя")
+			this.name = newName;
+			return	"Имя изменено"
+		};
+		this.setAge = function(){
+			newAge = prompt("Введите возрост")
+			this.age = newAge;
+			return	"Возрост изменен"
+		};
+		this.setCity = function(){
+			newCity = prompt("Введите город")
+			this.city = newCity;
+			return	"Город изменен"
+		};
+	};
+	let andrey = new User("Андрей", "19", "Каспийск");
+	
+
+	console.log(andrey.setNametext("Миша"));
+	console.log(andrey.setName());
+	console.log(andrey.getName());
+	console.log(andrey.setAge());
+	console.log(andrey.getAge());
+	console.log(andrey.setCity());
+	console.log(andrey.getCity());
+
+</script>
+</body>
+</html>
