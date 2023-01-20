@@ -19,11 +19,10 @@
 				$result .= "Корень x1 равен: " . $x1;
 			}else{
 					$result .= "Нет корней";
-			}
+				}
 			return $result;
 		};
 		calc(23, 22, 8);
-		echo $result;
 	?>
 </body>
 </html>
