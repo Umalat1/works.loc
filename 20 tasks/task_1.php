@@ -20,6 +20,7 @@
     <body class="mod-bg-1 mod-nav-link ">
         <?php
                 $task = "Задание";
+                
                 $titleOne = "Первый заголовок статьи";
                 $discriptionOne = "Описание для статьи, чтобы рассказать о чем будет в статье в 
                     кратце. Здесь абсолютно комфортно вы можете генерировать 
@@ -56,24 +57,25 @@
                     <div class="panel-container show">
                         <div class="panel-content">
                             <div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g">
-                            <h3>
-                                <?php
-                                  echo $titleOne;
-                                ?>   
-                            </h3>
-                            <p>
-                                <?php
-                                echo $discriptionOne
-                                ?>
-                            </p>
-                            <h3>
-                                <?php
-                                echo $titleTwo
-                                ?>
-                            </h3>
-                            <p>
-                                <?php
-                                echo $discriptionTwo?>
+                                <h3>
+                                    <?php
+                                        echo $titleOne;
+                                    ?>
+                                </h3>
+                                <p>
+                                    <?php
+                                        echo $discriptionOne;
+                                    ?>
+                                </p>
+                                <h2>
+                                    <?php
+                                        echo $titleTwo;
+                                    ?>
+                                </h2>
+                                <p>
+                                    <?php
+                                        echo $discriptionTwo;
+                                    ?>
                             </p>
                         </div>
                         </div>

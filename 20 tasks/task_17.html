@@ -20,6 +20,18 @@
 
     </head>
     <body class="mod-bg-1 mod-nav-link ">
+        <?php 
+            $mass = [
+                [
+                    "panel" => "panel-collapse",
+                    "title" => "Collapse"
+                ],
+                [
+                    "panel" => "panel-fullscreen",
+                    "title" => "Fullscreen"
+                ],
+            ]
+         ?>
         <main id="js-page-content" role="main" class="page-content">
             <div class="row">
                 <div class="col-md-6">
@@ -29,8 +41,10 @@
                                 Задание
                             </h2>
                             <div class="panel-toolbar">
-                                <button class="btn btn-panel waves-effect waves-themed" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
-                                <button class="btn btn-panel waves-effect waves-themed" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
+                                <?php foreach ($mass as $key => $value) {?>
+
+                                <button class="btn btn-panel waves-effect waves-themed" data-action=<?php  echo $value["panel"]; ?> data-toggle="tooltip" data-offset="0,10" data-original-title=<?php echo $value["title"]; ?>></button>
+                                <?php  }?>
                             </div>
                         </div>
                         <div class="panel-container show">

@@ -18,13 +18,22 @@
         <link rel="stylesheet" media="screen, print" href="css/fa-regular.css">
     </head>
     <body class="mod-bg-1 mod-nav-link ">
+        <?php
+            $heading = "Задание";
+            $reports = "Репорты";
+            $analytics = "Аналитика";
+            $export = "Экспорт";
+            $storage = "Хранилище";
+        ?>
         <main id="js-page-content" role="main" class="page-content">
 
             <div class="col-md-6">
                 <div id="panel-1" class="panel">
                     <div class="panel-hdr">
                         <h2>
-                            Задание
+                            <?php
+                                echo $heading
+                            ?>
                         </h2>
                         <div class="panel-toolbar">
                             <button class="btn btn-panel waves-effect waves-themed" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
@@ -45,16 +54,32 @@
                                     </div>
                                     <ul id="js-list-msg" class="list-group px-2 pb-2 js-list-filter">
                                         <li class="list-group-item">
-                                            <span data-filter-tags="reports file">Репорты</span>
+                                            <span data-filter-tags="reports file">
+                                                <?php
+                                                    echo $reports;
+                                                ?>
+                                            </span>
                                         </li>
                                         <li class="list-group-item">
-                                            <span data-filter-tags="analytics graphs">Аналитика</span>
+                                            <span data-filter-tags="analytics graphs">
+                                                <?php
+                                                    echo $analytics
+                                                ?>
+                                            </span>
                                         </li>
                                         <li class="list-group-item">
-                                            <span data-filter-tags="export download">Экспорт</span>
+                                            <span data-filter-tags="export download">
+                                                <?php
+                                                    echo $export
+                                                ?>
+                                            </span>
                                         </li>
                                         <li class="list-group-item">
-                                            <span data-filter-tags="storage">Хранилище</span>
+                                            <span data-filter-tags="storage">
+                                                <?php
+                                                    echo $storage
+                                                ?>
+                                            </span>
                                         </li>
                                     </ul>
                                     <div class="filter-message js-filter-message mt-0 fs-sm"></div>
