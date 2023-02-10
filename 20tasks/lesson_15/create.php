@@ -25,17 +25,17 @@
             <div class="col-md-3">
                 <h2>Создание пользователя</h2>
 
-                <?php if(isset($_SESSION['message'])):?>
+                <?php if(isset($_SESSION['error'])):?>
                     <div class="alert alert-info" role="alert">
-                        <?php echo $_SESSION['message'];
-                        unset($_SESSION['message']);?>
+                        <?php echo $_SESSION['error'];
+                        unset($_SESSION['error']);?>
                     </div>
                 <?php endif;?>
 
                 <form action="store.php" method="post">
 
                     <div class="form-group">
-                        <label for="">Логин</label>
+                        <label for="">Ваше имя</label>
                         <input class="form-control" type="text" name="name">
                     </div>
 

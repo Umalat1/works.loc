@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@
                 <h2>Вы не зарегестрированы</h2>
                 <h2>Здраствуйте, </h2>
                 <div>
-                    <a href="#" class="btn btn-info">Войти</a>
+                    <a href="auth_from.php" class="btn btn-info">Войти</a>
                     <a href="create.php" class="btn btn-info">Зарегестрироваться</a>
                     <a href="#" class="btn btn-danger">Выйти</a>
                 </div>
