@@ -29,6 +29,11 @@ session_start()
             <form action="update.php" method="post">
 
                 <div class="form-group">
+                    <label for="">Логин</label>
+                    <input class="form-control" type="text" name="name">
+                </div>
+
+                <div class="form-group">
                     <label for="">Эл. почта</label>
                     <input class="form-control" type="text" name="email">
                 </div>
@@ -36,6 +41,10 @@ session_start()
                 <div class="form-group">
                     <label for="">Пароль</label>
                     <input class="form-control" type="password" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="">номер телефона</label>
+                    <input class="form-control" type="text" name="number">
                 </div>
 
                 <div class="form-group mt-2">

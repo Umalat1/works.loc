@@ -48,9 +48,9 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Username</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Number</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -58,9 +58,9 @@
                             <?php foreach ($tasks as $user): ?>
                                 <tr>
                                     <th scope="row"><?php echo $user['id']; ?></th>
-                                    <td><?php echo $user['firstname']; ?></td>
-                                    <td><?php echo $user['lastname']; ?></td>
-                                    <td><?php echo $user['username']; ?></td>
+                                    <td><?php echo $user['name']; ?></td>
+                                    <td><?php echo $user['email']; ?></td>
+                                    <td><?php echo $user['number']; ?></td>
                                     <td>
                                         <a href="show.php?id=<?php echo $user['id']; ?>" class="btn btn-info">Show</a>
                                         <a href="edit.php?id=<?php echo $user['id']; ?>" class="btn btn-warning">Edit</a>

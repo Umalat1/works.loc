@@ -25,6 +25,7 @@
                 <h2>Здраствуйте, </h2>
                 <div>
                     <a href="#" class="btn btn-info">Войти</a>
+                    <a href="create.php" class="btn btn-info">Зарегестрироваться</a>
                     <a href="#" class="btn btn-danger">Выйти</a>
                 </div>
             </div>
