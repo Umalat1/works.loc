@@ -1,3 +1,4 @@
+<?php session_start()?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,16 +20,43 @@
 <link rel="stylesheet" media="screen, print" href="css/fa-regular.css">
 </head>
 <body>
+    <?php
+    if(empty($_SESSION['user'])){
+        $_SESSION['error'] = '<h2>Вы не зарегестрированы</h2>';
+        $_SESSION['enter'] = '<a href="auth_from.php" class="btn btn-info">Войти</a>';
+        $_SESSION['registration'] = '<a href="auth_from.php" class="btn btn-info">Зарегестрироватьтся</a>';
+    }?>
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h2>Вы не зарегестрированы</h2>
-                <h2>Здраствуйте, </h2>
+                <?php if(isset($_SESSION['user'])):?>
+                    <?php echo $_SESSION['user'];
+                    unset($_SESSION['user']);?>
+                <?php endif;?>
+
+                <?php if(isset($_SESSION['error'])):?>
+                    <?php echo $_SESSION['error'];
+                    unset($_SESSION['error  ']);?>
+                <?php endif;?>
                 <div>
-                    <a href="auth_from.php" class="btn btn-info">Войти</a>
-                    <a href="create.php" class="btn btn-info">Зарегестрироваться</a>
-                    <a href="#" class="btn btn-danger">Выйти</a>
+                    <?php if(isset($_SESSION['exit'])):?>
+                        <?php echo $_SESSION['exit'];
+                        unset($_SESSION['exit']);?>
+                    <?php endif;?>
+
+                    <?php if(isset($_SESSION['enter'])):?>
+                        <?php echo $_SESSION['enter'];
+                        unset($_SESSION['enter']);?>
+                    <?php endif;?>
+
+                    <?php if(isset($_SESSION['registration'])):?>
+                        <?php echo $_SESSION['registration'];
+                        unset($_SESSION['registration']);?>
+                    <?php endif;?>
+
                 </div>
+                <br>
+                <a href="users.php" class="btn btn-info">Список пользователей</a>
             </div>
 
         </div>

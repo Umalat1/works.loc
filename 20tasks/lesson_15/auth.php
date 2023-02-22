@@ -27,6 +27,10 @@ if(!password_verify($password, $user['password'])) {
     header('Location: \20tasks\lesson_15\auth_from.php');
     exit;
 }
+    header('Location: \20tasks\lesson_15\index.php');
+
+    $_SESSION['user'] = '<h2>Здраствуйте</h2>' . $email;
+    $_SESSION['exit'] = '<a href="exit.php" class="btn btn-danger">Выйти</a>';
 
 
 
