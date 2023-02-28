@@ -17,23 +17,21 @@
     <link rel="stylesheet" media="screen, print" href="css/fa-brands.css">
     <link rel="stylesheet" media="screen, print" href="css/fa-regular.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
-    <div class="container mt-3">
-        <div class="col-md-6">
-            <div id="panel-1" class="panel">
-                <form action="save.php" enctype="multipart/form-data" method="post">
-                    <div class="form-group">
-                        <input type="file" name="images">
-                    </div>
-
-                    <div class="form-group mt-3">
-                        <button class="btn btn-success" type="submit">Submit</button>
-                    </div>
-                </form>
-            </div>
+<div class="container mt-3">
+    <div class="col-md-6">
+        <div id="panel-1" class="panel">
+            <form action="save.php" enctype="multipart/form-data" method="post">
+                <div class="form-group">
+                    <input type="file" name="images[]" multiple>
+                </div>
+                <div class="form-group mt-3">
+                    <button class="btn btn-success" type="submit">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 </body>
 </html>
