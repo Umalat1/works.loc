@@ -2,9 +2,7 @@
 
 require_once 'Database.php';
 
-//Database::getInstance();
-//Database::getInstance();
-$users = Database::getInstance()->query("SELECT * FROM users");
+$users = Database::getInstance()->query("SELECT * FROM users WHERE username IN (?, ?)", ['Umalat', 'Muhammad']);
 
 //var_dump($users->count()); die;
 if($users->error()) {
@@ -15,4 +13,3 @@ if($users->error()) {
     }
 }
 die;
-//var_dump($users);
