@@ -91,6 +91,23 @@ class Database {
         return false;
     }
 
+    public function update($table, $id, $fields = []) {
+        $set = '';
+        foreach ($fields as $key =>$field) {
+            $set .= "{$key} = ?,";
+        }
+
+        $set = rtrim($set, ',');
+
+        $sql = "UPDATE {$table} SET {$set} WHERE id = {$id}";
+
+        if (!$this->query($sql, $fields)->error) {
+            return true;
+        }
+
+        return false;
+    }
+
     public function error()
     {
         return $this->error;
