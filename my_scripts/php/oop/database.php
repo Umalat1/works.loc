@@ -35,7 +35,7 @@ class Database {
         if(!$this->query->execute()) {
             $this->error = true;
         } else {
-            $this->results = $this->query->fetchAll(PDO::FETCH_OBJ);
+            $this->result = $this->query->fetchAll(PDO::FETCH_ASSOC);
             $this->count = $this->query->rowCount();
         }
 
@@ -73,6 +73,24 @@ class Database {
         }
         return false;
     }
+
+
+    public function insert($table, $fields = [])
+    {
+        $values = '';
+        foreach ($fields as $field) {
+            $values .= "?,";
+        }
+        $val = rtrim($values, ',');
+
+        $sql = "INSERT INTO {$table} (" . '`' . implode('`, `', array_keys($fields)) . '`' . ") VALUES ({$val})";
+
+        if(!$this->query($sql, $fields)->error()) {
+            return true;
+        }
+        return false;
+    }
+
     public function error()
     {
         return $this->error;
