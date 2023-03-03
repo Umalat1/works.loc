@@ -26,17 +26,27 @@ require_once 'Config.php';
 //    'password' => '333'
 //]);
 
-$GLOBALS['config'] = [
-    'mysql' => [
-        'host' => 'localhost',
-        'username' => 'root',
-        'password' => '',
-        'database' => 'test',
+$GLOBALS["config"] = [
+    'mysql'   => [
+        "host"      => "localhost",
+        "username"  => "root",
+        "password"  => "",
+        "database"  => "test",
+        "something" => [
+            "no" => [
+                "foo" => [
+                    "bar" => "baz"
+                ]
+            ]
+        ]
     ],
-    'config_my' => []
+    'session' => [
+        'token_name' => 'token',
+    ]
 ];
 
-$users = Database::getInstance()->query('select * from users');
-var_dump($users->results());
+$users = Database::getInstance()->query('SELECT * FROM users');
+var_dump($users);
+
 
 
