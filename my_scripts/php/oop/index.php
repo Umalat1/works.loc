@@ -7,6 +7,7 @@ require_once 'Input.php';
 require_once 'Validate.php';
 require_once 'Token.php';
 require_once 'Session.php';
+require_once 'User.php';
 
 //$users = Database::getInstance()->query("SELECT * FROM users WHERE username IN (?, ?)", ['Umalat', 'Muhammad']);
 
@@ -47,6 +48,7 @@ $GLOBALS["config"] = [
     ],
     'session' => [
         'token_name' => 'token',
+        'user_session'=> 'user',
     ]
 ];
 
@@ -76,11 +78,17 @@ if (Input::exists()) {
 
         if ($validation->passed()) {
 
-            Session::flash('success', 'register success');
-            header('Location:   test.php');
+            $user = new User();
+            $user->create([
+                'username' => Input::get('username'),
+                'password' => password_hash(Input::get('password'), PASSWORD_DEFAULT)
+            ]);
+
+            Session::flash('success', 'user register done');
+            //			header('Location: test.php');
         } else {
             foreach ($validation->errors() as $error) {
-                echo $error . "<br>";
+                echo $error . '<br>';
             }
         }
     }
