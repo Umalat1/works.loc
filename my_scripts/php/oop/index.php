@@ -74,11 +74,12 @@ if (Input::exists()) {
             ],
         ]);
 
+        if ($validation->passed()) {
 
-        if ($validate->passed()) {
-            echo 'passed';
+            Session::flash('success', 'register success');
+            header('Location:   test.php');
         } else {
-            foreach ($validate->errors() as $error) {
+            foreach ($validation->errors() as $error) {
                 echo $error . "<br>";
             }
         }
