@@ -41,18 +41,23 @@
                                 if ($check->count()) {
                                     $this->addError("{$item} already exists");
                                 }
-                                break;
+                            break;
                         }
                     }
                 }
             }
         }
 
+
         public function addError($error){
             $this->errors[] = $error;
         }
 
         public function errors() {
+            return $this->errors;
+        }
+
+        public function passed() {
             return $this->passed;
         }
     }

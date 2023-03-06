@@ -66,13 +66,13 @@ if (Input::exists()) {
         'password_again' => [
         'required' => true,
         'matches' => 'password'
-    ]
+    ],
     ]);
 
-    if ($validation->passed()) {
+    if ($validate->passed()) {
         echo 'passed';
     } else {
-        foreach ($validation->errors() as $error) {
+        foreach ($validate->errors() as $error) {
             echo $error . "<br>";
         }
     }
