@@ -1,9 +1,12 @@
 <?php
+session_start();
 
 require_once 'Database.php';
 require_once 'Config.php';
 require_once 'Input.php';
 require_once 'Validate.php';
+require_once 'Token.php';
+require_once 'Session.php';
 
 //$users = Database::getInstance()->query("SELECT * FROM users WHERE username IN (?, ?)", ['Umalat', 'Muhammad']);
 
@@ -50,30 +53,34 @@ $GLOBALS["config"] = [
 //$users = Database::getInstance()->query('SELECT * FROM users');
 
 if (Input::exists()) {
-    $validate = new Validate();
 
-    $validation = $validate->check($_POST, [
-        'username' => [
-            'required' => true,
-            'min' => 2,
-            'max' =>15,
-            'unique' => 'users'
-        ],
-        'password' => [
-            'required' => true,
-            'min' => 3
-        ],
-        'password_again' => [
-        'required' => true,
-        'matches' => 'password'
-    ],
-    ]);
+    if (Token::check(Input::get('token'))) {
+        $validate = new Validate();
 
-    if ($validate->passed()) {
-        echo 'passed';
-    } else {
-        foreach ($validate->errors() as $error) {
-            echo $error . "<br>";
+        $validation = $validate->check($_POST, [
+            'username' => [
+                'required' => true,
+                'min' => 2,
+                'max' => 15,
+                'unique' => 'users'
+            ],
+            'password' => [
+                'required' => true,
+                'min' => 3
+            ],
+            'password_again' => [
+                'required' => true,
+                'matches' => 'password'
+            ],
+        ]);
+
+
+        if ($validate->passed()) {
+            echo 'passed';
+        } else {
+            foreach ($validate->errors() as $error) {
+                echo $error . "<br>";
+            }
         }
     }
 }
@@ -96,6 +103,7 @@ if (Input::exists()) {
         <input type="text" name="password_again">
     </div>
 
+    <input type="hidden" name="token" value="<?php echo Token::generate();?>">
     <div class="filed">
         <button type="submit">Submit</button>
     </div>
