@@ -2,7 +2,7 @@
 
     class User
     {
-        private $db, $data, $session_name;
+        private $db, $date, $session_name;
 
         public function __construct()
         {
@@ -16,29 +16,28 @@
 
         }
 
-        public  function login($email = null, $password = null) {
-            if($email)
-            {
+        public function login($email = null, $passwword = null) {
+            if($email) {
                 $user = $this->find($email);
-                if ($user) {
-                    if (password_verify($password, $this->data()->passwerd)) {
-                        Session::put($this->session_name, $this->data()->id);
+                if ($user){
+                    if(password_verify($passwword, $this->date->password)) {
+                        Session::put($this->session_named, $this->date->id);
                         return true;
                     }
                 }
+
             }
             return false;
         }
 
         public function find($email = null) {
-                $this->data = $this->db->get('users', ['email', '=', $email])->first();
-                if ($this->data) {
-                    return true;
-                }
+            $this->date = $this->db->get('users', ['email', '=', $email])->first();
+            if($this->date) {
+                return true;
+            }
             return false;
-        }
-
+            }
         public function data() {
-            return $this->data;
+            return $this->date;
         }
     }
