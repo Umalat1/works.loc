@@ -4,10 +4,22 @@
     {
         private $db, $date, $session_name;
 
-        public function __construct()
+        public function __construct($user = null)
         {
             $this->db = Database::getInstance();
             $this->session_name = Config::get('session.user_session');
+
+            if(!$user) {
+                if (Session::exists($this->session_name))  {
+                    $user = Session::get($this->session_name);
+
+                    if ($this->find($user)) {
+                        $this->isLoggedIn = true;
+                    } else {
+
+                    }
+                }
+            }
         }
 
         public function create($fields = [])
@@ -30,8 +42,14 @@
             return false;
         }
 
-        public function find($email = null) {
-            $this->date = $this->db->get('users', ['email', '=', $email])->first();
+        public function find($value = null) {
+            if (is_numeric($value)) {
+                $this->date = $this->db->get('users', ['id', '=', $value])->first();
+            } else {
+                $this->date = $this->db->get('users', ['email', '=', $value])->first();
+            }
+
+
             if($this->date) {
                 return true;
             }
@@ -39,5 +57,8 @@
             }
         public function data() {
             return $this->date;
+        }
+        public function isLoggedIn(){
+            return $this->isLoggedIn;
         }
     }
