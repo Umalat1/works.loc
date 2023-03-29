@@ -58,7 +58,12 @@
         public function data() {
             return $this->date;
         }
-        public function isLoggedIn(){
+
+        public function isLoggedIn() {
             return $this->isLoggedIn;
+        }
+
+        public function logout() {
+            return Session::delete($this->session_name);
         }
     }
