@@ -69,7 +69,7 @@ if (Input::exists()) {
     </div>
 
     <div class="filed">
-        <label for="">Password_again</label>
+        <label for="">Password <A></A>gain</label>
         <input type="text" name="password_again">
     </div>
 

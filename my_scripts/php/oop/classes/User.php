@@ -28,12 +28,31 @@
 
         }
 
-        public function login($email = null, $passwword = null) {
-            if($email) {
+        public function login($email = null, $passwword = null,$remember = false) {
+            if($email && !$passwword && $this->exists()) {
+                Session::put($this->session_name, $this->date()->id);
+            } else {
                 $user = $this->find($email);
                 if ($user){
                     if(password_verify($passwword, $this->date->password)) {
                         Session::put($this->session_named, $this->date->id);
+
+                        if($remember){
+                            $hash = hash('sha256', uniqid());
+
+                            $hashCheck = $this->db->get('user_session', ['user_id', '=', $this->date()->id]);
+
+                            if(!$hashCheck->count()) {
+                                $this->db->insert('user_session', [
+                                    'user_id' => $this->date()->id,
+                                    'hash' => $hash
+                                ]);
+                            } else {
+                                $hash = $hashCheck->first()->hash;
+                            }
+
+                            Config::put($this->cookieName, $hash, Config::get('cookie.cookie_expiry'));
+                        }
                         return true;
                     }
                 }
