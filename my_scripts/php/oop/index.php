@@ -5,7 +5,7 @@ require_once 'init.php';
 
 $user = new User;
 $anotherUser = new User(18);
-            if($user->isLoggedIn()) {
+  if($user->isLoggedIn()) {
     echo "Hi, <a href='#'>{$user->date()->username}</a>";
     echo "<p><a href='logout.php'>Logout</a></p>";
 } else {

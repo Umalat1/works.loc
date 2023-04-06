@@ -28,14 +28,14 @@
 
         }
 
-        public function login($email = null, $passwword = null,$remember = false) {
-            if($email && !$passwword && $this->exists()) {
+        public function login($email = null, $passwword = null, $remember = false) {
+            if(!$email && !$passwword && $this->exists()) {
                 Session::put($this->session_name, $this->date()->id);
             } else {
                 $user = $this->find($email);
                 if ($user){
-                    if(password_verify($passwword, $this->date->password)) {
-                        Session::put($this->session_named, $this->date->id);
+                    if(password_verify($passwword, $this->date()->password)) {
+                        Session::put($this->session_named, $this->date()->id);
 
                         if($remember){
                             $hash = hash('sha256', uniqid());
