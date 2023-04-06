@@ -34,8 +34,8 @@
             } else {
                 $user = $this->find($email);
                 if ($user){
-                    if(password_verify($passwword, $this->date()->password)) {
-                        Session::put($this->session_named, $this->date()->id);
+                    if(password_verify($passwword, $this->date->password)) {
+                        Session::put($this->session_named, $this->date->id);
 
                         if($remember){
                             $hash = hash('sha256', uniqid());
