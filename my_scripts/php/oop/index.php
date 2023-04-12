@@ -8,6 +8,7 @@ $anotherUser = new User(18);
 if($user->isLoggedIn()) {
     echo "Привет " . $user->data()->username;
     echo "<p><a href='logout.php'>Logout</a></p>";
+    echo "<p><a href='update.php'>Update profile</a></p>";
 } else {
     echo "<a href='login.php'>Login</a> or ";
     echo "<a href='register.php'>Register</a>";
