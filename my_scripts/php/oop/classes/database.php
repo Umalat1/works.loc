@@ -1,5 +1,5 @@
 <?php
-require_once "config.php";
+require_once "Config.php";
 
 class Database
 {
@@ -47,7 +47,7 @@ class Database
         return $this->action('DELETE', $table, $where);
     }
 
-        public function get($table, $where = []) {
+    public function get($table, $where = []) {
         return $this->action('SELECT *', $table, $where);
     }
 

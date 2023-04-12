@@ -27,13 +27,14 @@ $GLOBALS["config"] = [
     ],
     'session' => [
         'token_name' => 'token',
-        'user_session'=> 'user',
+        'user_session'=> 'user'
     ],
     'cookie' => [
         'cookie_name' => 'hash',
         'cookie_expiry' => 604800
     ]
 ];
+//var_dump($_SESSION); - Проверял массив SESSION
 if(Cookie::exists(Config::get('cookie.cookie_name')) && !Session::exists(Config::get('session.user_session'))) {
     $hash = Config::get(Config::get('cookie.cookie_name'));
     $hashCheck =  Database::getInstance()->get('user_sessions', ['hash', '=', $hash]);

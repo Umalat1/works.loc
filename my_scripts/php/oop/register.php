@@ -2,7 +2,6 @@
     require_once 'init.php';
 
 if (Input::exists()) {
-
     if (Token::check(Input::get('token'))) {
         $validate = new Validate();
 
@@ -69,7 +68,7 @@ if (Input::exists()) {
     </div>
 
     <div class="filed">
-        <label for="">Password gain</label>
+        <label for="">Password again</label>
         <input type="text" name="password_again">
     </div>
 
