@@ -82,31 +82,22 @@ class User
     }
 
     public function logout() {
+        $this->db->delete('user_session', ['user_id', '=', $this->data()->id]);
+        Session::delete($this->session_name);
         Cookie::delete($this->cookieName);
-        return Session::delete($this->session_name);
+
+    }
+
+    public function exists() {
+        return (!empty($this->date())) ? true : false;
     }
 
     public function update($fields = [], $id = null) {
+
         if (!$id && $this->isLoggedIn()) {
             $id = $this->data()->id;
         }
         $this->db->update('users', $id, $fields);
     }
 
-    public function hasPermission($key = null) {
-        $groupID = $this->data()->group_id;
-        $group = $this->db->get('groups', ['id', '=', $groupID]);
-
-        //		var_dump($groupID);
-        if ($group->count()) {
-            $permissions = $group->first()->permission;
-            $permissions = json_decode($permissions, true);
-            var_dump($permissions );
-            if ($permissions[$key]) {
-                return true;
-            }
-        }
-
-        return false;
-    }
 }
