@@ -5,9 +5,9 @@ $user = new User();
 $validate = new Validate();
 $validate->check($_POST,
     [
-        'current_password' => ['required' => true, 'min' => 6],
-        'new_password' => ['required' => true, 'min' => 6],
-        'new_password_again' => ['required' => true, 'min' => 6, 'matches' => 'new_password'],
+        'current_password' => ['required' => true, 'min' => 3],
+        'new_password' => ['required' => true, 'min' => 3],
+        'new_password_again' => ['required' => true, 'min' => 3, 'matches' => 'new_password'],
     ]
 );
 
@@ -15,11 +15,14 @@ if (Input::exists()) {
     if (Token::check(Input::get('token'))) {
         if ($validate->passed()) {
 
-            if(!password_verify(Input::get('current_password'), $user->data()->password)) {
-                echo 'Current password is invalid'; exit;
+            if(password_verify(Input::get('current_password'), $user->data()->password)) {
+                $user->update(['password' => password_hash(Input::get('new_password'), PASSWORD_DEFAULT)]);
+                Session::flash('success', 'Password has been updated.');
+                Redirect::to('index.php');
+            } else {
+                echo "Invalid current password";
             }
-            $user->update(['password' => password_hash(Input::get('new_password'), PASSWORD_DEFAULT)]);
-            Redirect::to('chenge_password.php');
+
         } else {
             foreach ($validate->errors() as $error) {
                 echo $error . '<br>';
