@@ -1,0 +1,49 @@
+.outline{
+    ouвline: 1px solid red;
+}
+body{
+    width: 1440px;
+}
+.header{
+    margin-top: 12px;
+}
+.wrap{
+    display: flex;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+.nav{
+    display: flex;
+    margin-left: 861px;
+}
+.nav ul li{
+    list-style-type: none;
+}
+.navigation_menu{
+    color: #212529;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+.number{
+    margin-left: 190px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.hero{
+    margin-top: 40px;
+}
+.hero .wrap {
+
+}
+.text{
+    display: flex;
+}
+.text1{
+    font-size: 72px;
+    font-weight: 400;
+}
+.link{
+    padding-top: 217px;
+    padding-left: 533px;
+}
