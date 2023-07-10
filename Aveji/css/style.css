@@ -47,3 +47,22 @@ body{
     padding-top: 217px;
     padding-left: 533px;
 }
+.hero2{
+    padding-top: 40px;
+}
+.text2{
+    font-size: 20px;
+    font-weight: 400;
+}
+.picture_one{
+    padding-left: 333px;
+}
+.hero2 .wrap{
+    position: relative;
+
+}
+.picture_two{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
