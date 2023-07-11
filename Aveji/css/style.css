@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .outline{
     ouвline: 1px solid red;
 }
@@ -8,9 +12,15 @@ body{
     margin-top: 12px;
 }
 .wrap{
+    top: 0;
+    bottom: 0;
     display: flex;
     margin-left: 32px;
     margin-right: 32px;
+}
+.logo{
+    width: 70px;
+    height: 74px;
 }
 .nav{
     display: flex;
@@ -56,6 +66,8 @@ body{
 }
 .picture_one{
     padding-left: 333px;
+    width: 678px;
+    height: 809px;
 }
 .hero2 .wrap{
     position: relative;
@@ -65,4 +77,26 @@ body{
     position: absolute;
     left: 0;
     bottom: 0;
+}
+.images{
+    object-fit: cover;
+}
+.about{
+    margin-top: 120px;
+}
+.about_text {
+    font-size: 48px;
+}
+.about_text2{
+    font-size: 16px;
+    padding-left: 288px;
+}
+.about_number_one{
+    padding-top: 44px;
+}
+.about_number{
+    font-size: 36px;
+    margin-top: 24px;
+}
+.about_text3{
 }
