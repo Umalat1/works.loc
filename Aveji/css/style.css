@@ -3,7 +3,7 @@
     padding: 0;
 }
 .outline{
-    ouвline: 1px solid red;
+    utline: 1px solid red;
 }
 body{
     width: 1440px;
@@ -133,5 +133,31 @@ body{
     margin-top: 32px;
 }
 .projects_img1{
+    margin-top: 20px;
+}
+.reviews{
+    font-size: 48px;
+}
+.testimonials{
+    margin-top: 120px;
+}
+.testimonials_border{
+    margin-top: 32px;
+    border: 1px solid black;
+    width: 445px;
+    height: 327px;
+    text-align: center;
+}
+.testimonials_header{
+    font-size: 48px;
+}
+.testimonials_img{
+    margin-top: 40px;
+}
+.reviews{
+    font-size: 18px;
+    margin-top: 32px;
+}
+.reviews_text{
     margin-top: 20px;
 }
