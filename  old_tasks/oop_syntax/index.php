@@ -1,7 +1,16 @@
 <?php
 class Person{
     public $name;
-    public $age = "31 ";
+    public $age;
+
+    public function __construct($name, $age){//конструктор вызывается автоматически при создании объекта
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+//    public function test(){
+//        return "Привет";
+//    }
 
     public function sayHello() {
         return 'Hi I am ' . $this->name . ' and i am ' . $this->sayAge();
@@ -21,21 +30,14 @@ class Person{
 }
 
 
-$myPerson = new Person;
-$myPerson2 = new Person;
+$myPerson = new Person("Умалат", 18);
+$myPerson2 = new Person("Мурад", 19);
 
-$myPerson->setName("Умалат");
-$myPerson->setAge(18);
-echo $myPerson->sayHello();
-//$myPerson->setName("Мурад");
-//$myPerson->setAge(20);
-//echo $myPerson->name;
-//echo $myPerson->age;
-//$myPerson->sayHello("Умалат");
-//$myPerson->sayHello("Мурад");
-//$myPerson2->setName("Умалат");
-//echo $myPerson->name;
-//echo $myPerson2->name;
-//$myPerson->sayHello();
-//$myPerson->sayHello();
-//$myPerson->sayHello();
+echo $myPerson->name;
+echo $myPerson->age;
+
+echo $myPerson2->name;
+echo $myPerson2->age;
+
+//echo $myPerson->test();
+//echo $myPerson2->test();
