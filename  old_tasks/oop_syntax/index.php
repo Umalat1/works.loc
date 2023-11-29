@@ -1,14 +1,22 @@
 <?php
 class Person{
-    public $name;// Мурад
-    public $age = "20 ";
+    public $name;
+    public $age = "31 ";
 
-    public function  sayHello($name) {
-        echo "Hi I am " . $name;
+    public function sayHello() {
+        return 'Hi I am ' . $this->name . ' and i am ' . $this->sayAge();
+    }
+
+    public function sayAge() {
+        return $this->age;
     }
 
     public function setName($name){
-        $this->name = $name;// Мурад
+        $this->name = $name;
+    }
+
+    public function setAge($age){
+        $this->age = $age;
     }
 }
 
@@ -16,12 +24,18 @@ class Person{
 $myPerson = new Person;
 $myPerson2 = new Person;
 
+$myPerson->setName("Умалат");
+$myPerson->setAge(18);
+echo $myPerson->sayHello();
+//$myPerson->setName("Мурад");
+//$myPerson->setAge(20);
+//echo $myPerson->name;
+//echo $myPerson->age;
 //$myPerson->sayHello("Умалат");
 //$myPerson->sayHello("Мурад");
-$myPerson->setName("Мурад");
-$myPerson2->setName("Умалат");
-echo $myPerson->name;
-echo $myPerson2->name;
+//$myPerson2->setName("Умалат");
+//echo $myPerson->name;
+//echo $myPerson2->name;
 //$myPerson->sayHello();
 //$myPerson->sayHello();
 //$myPerson->sayHello();
