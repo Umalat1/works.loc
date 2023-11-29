@@ -28,10 +28,10 @@ class Person{
     public function setAge($age){
         $this->age = $age;
     }
+
+    public static function saySomething(){
+        echo "Hello bla-bla";
+    }
 }
 
-
-$myPerson = new Person("Умалат", 18);
-$myPerson2 = new Person("Мурад", 19);
-
-echo $myPerson::ID;
+Person::saySomething();
