@@ -2,6 +2,7 @@
 class Person{
     public $name;
     public $age;
+    const ID = 11;
 
     public function __construct($name, $age){//конструктор вызывается автоматически при создании объекта
         $this->name = $name;
@@ -33,11 +34,4 @@ class Person{
 $myPerson = new Person("Умалат", 18);
 $myPerson2 = new Person("Мурад", 19);
 
-echo $myPerson->name;
-echo $myPerson->age;
-
-echo $myPerson2->name;
-echo $myPerson2->age;
-
-//echo $myPerson->test();
-//echo $myPerson2->test();
+echo $myPerson::ID;
