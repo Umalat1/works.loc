@@ -1,0 +1,207 @@
+* {
+    font-family: "Arial";
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+/*.header{*/
+/*    background: radial-gradient(*/
+/*            182.66% 2461.3% at -37.15% -104.17%,*/
+/*            #14213d 0%,*/
+/*            lightblue 100%*/
+/*    ),*/
+/*   lightblue;*/
+/*}*/
+.layout__content {
+    max-width: 1128px;
+    margin: 0 auto;
+}
+.layout__head{
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+.header{
+    margin-top: 20px;
+}
+.menu{
+    margin-top: 20px;
+    display: flex;
+    margin-left: 400px;
+    justify-content: space-between;
+    width: 500px;
+    font-size: 20px;
+}
+.menu a{
+    transition: 0.5s;
+}
+.menu a:hover{
+    color: #0a6ebd;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.background {
+    margin-top: 50px;
+    background: url("../pictures/background_printer3.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+    height: 500px;
+    background-size: cover;
+    border-radius: 10px;
+}
+.text-catalog{
+    text-align: center;
+    padding-top: 100px;
+}
+.text{
+    color: white;
+    text-decoration: none;
+}
+.text-background{
+    margin-top: 30px;
+}
+.div-button{
+    margin-top: 50px;
+    padding-left: 425px;
+}
+.button{
+    border: 0;
+    height: 65px;
+    width: 225px;
+    background: orangered;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition: 0.6s;
+}
+.button:hover{
+    background: #f37521;
+}
+.typography_h1 {
+    font-size: 80px;
+    line-height: 88px;
+    font-weight: bold;
+}
+
+.typography_h2 {
+    font-size: 50px;
+    line-height: 56px;
+    font-weight: 700;
+}
+.typography_h4 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.typography_p1 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.typography_p2 {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 270px;
+    height: 460px;
+    background: #ffffff;
+    border-radius: 10px;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.product:hover{
+    transform: scale(1.2);
+}
+.product__name {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.product__info-row {
+    display: flex;
+    margin: 5px 0;
+}
+
+.product__info-row > * {
+    flex: 1;
+}
+.printer{
+    text-align: center;
+}
+.printer img{
+    width: 275px;
+    height: 210px;
+
+    object-fit: cover;
+
+}
+.printer img:hover{
+}
+.printers{
+    margin-top: 50px;
+}
+.div-basket{
+}
+.button-basket{
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    background: #0a6ebd;
+    transition: 0.6s;
+}
+.button-basket:hover{
+    background: #0c54a0;
+}
+.footer{
+    background: #2a2d35;
+}
+.footer-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+    height: 150px;
+
+}
+.footer-menu{
+    justify-content: space-between;
+    display: flex;
+}
+.projects{
+    display: flex;
+}
+.nav{
+    margin-top: 20px;
+}
+.text-printer{
+    margin-top: 50px;
+}
+.variety{
+    color: white;
+    padding-bottom: 5px;
+    text-align: center;
+    background: #2a2d35;
+}

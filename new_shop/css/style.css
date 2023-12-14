@@ -1,0 +1,157 @@
+* {
+    font-family: "Arial";
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    padding-top: 20px;
+}
+.layout__content {
+    max-width: 1128px;
+    margin: 0 auto;
+}
+.menu{
+    margin-top: 20px;
+    display: flex;
+    margin-left: 400px;
+    justify-content: space-between;
+    width: 500px;
+    font-size: 20px;
+}
+.menu a{
+    transition: 0.5s;
+}
+.menu a:hover{
+    color: #0a6ebd;
+}
+.background{
+    margin-top: 50px;
+    background: url("../pictures/background_printer.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+    height: 500px;
+    background-size: cover;
+    border-radius: 10px;
+}
+.background-text{
+    line-height: 100px;
+    padding-top: 100px;
+    padding-left: 20px;
+    font-weight: bold;
+    color: white;
+}
+.div-button{
+    margin-top: 50px;
+    margin-left: 20px;
+
+}
+.button{
+    text-decoration: none;
+    border: 0;
+    height: 65px;
+    width: 225px;
+    background: orangered;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition: 0.6s;
+}
+.button:hover{
+    background: #f37521;
+}
+.layout__head{
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.typography_h1 {
+    font-size: 80px;
+    line-height: 88px;
+    font-weight: bold;
+}
+
+.typography_h2 {
+    font-size: 50px;
+    line-height: 56px;
+    font-weight: 700;
+}
+
+.typography_h4 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.typography_p1 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.typography_p2 {
+    font-size: 16px;
+    line-height: 20px;
+}
+.delivery{
+    display: flex;
+    margin-top: 100px;
+}
+.delivery-image img{
+    width: 500px;
+}
+.delivery-text1{
+    padding-top: 20px;
+}
+.location{
+    margin-top: 100px;
+}
+.location img{
+    width: 1128px;
+}
+.comment{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    background: url("../pictures/клавиотура.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+    height: 500px;
+    background-size: cover;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+.comment-text{
+    margin-top: 20px;
+}
+.image-name{
+    display: flex;
+    align-items: center;
+}
+.image img{
+    width: 70px;
+    border-radius: 100%;
+}
+.name{
+    padding-left: 20px;
+}
+.nav{
+    margin-top: 20px;
+}
+.text-printer{
+    margin-top: 50px;
+}
+.variety{
+    padding-bottom: 5px;
+    text-align: center;
+    background: #2a2d35;
+}
