@@ -16,8 +16,9 @@
         <div class="logo typography_h2">Copy Star</div>
         <div class="menu typography_p1">
             <div><a class="link" href="index.php">О нас</a></div>
-            <div><a class="link" href="catalog.html" style="color: #0a6ebd">Каталог</a></div>
+            <div><a class="link" href="#" style="color: #0a6ebd">Каталог</a></div>
             <div><a class="link" href="product.php">Товар</a></div>
+            <div><a class="link" href="basket.php">Корзина</a></div>
             <div><a class="link" href="index.php">Где нас найти</a></div>
         </div>
     </div>
@@ -29,7 +30,7 @@
             <div class="products">
                 <?php foreach (conclusion_cards() as $card):?>
                 <?php if ($card['type'] == 'matrix'):?>
-                <form action="basket.php" method="post">
+                <form action="add_basket.php" method="post">
                     <input style="display: none" type="number" name="id" value="<?php echo $card['id']?>">
                     <div class="product">
                         <div class="printer"><img src="pictures/<?php echo $card['image']?>"></div>
@@ -51,7 +52,7 @@
             <div class="products">
                 <?php foreach (conclusion_cards() as $card):?>
                     <?php if ($card['type'] == 'sublimation'):?>
-                        <form action="basket.php" method="post">
+                        <form action="add_basket.php" method="post">
                             <input style="display: none" type="number" name="id" value="<?php echo $card['id']?>">
                             <div class="product">
                                 <div class="printer"><img src="pictures/<?php echo $card['image']?>"></div>
@@ -74,7 +75,7 @@
             <div class="products">
                 <?php foreach (conclusion_cards() as $card):?>
                     <?php if ($card['type'] == 'jet'):?>
-                        <form action="basket.php" method="post">
+                        <form action="add_basket.php" method="post">
                             <input style="display: none" type="number" name="id" value="<?php echo $card['id']?>">
                             <div class="product">
                                 <div class="printer"><img src="pictures/<?php echo $card['image']?>"></div>
@@ -96,7 +97,7 @@
             <div class="products">
                 <?php foreach (conclusion_cards() as $card):?>
                     <?php if ($card['type'] == 'laser'):?>
-                        <form action="basket.php" method="post">
+                        <form action="add_basket.php" method="post">
                             <input style="display: none" type="number" name="id" value="<?php echo $card['id']?>">
                             <div class="product">
                                 <div class="printer"><img src="pictures/<?php echo $card['image']?>"></div>

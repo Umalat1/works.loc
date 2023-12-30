@@ -23,7 +23,7 @@ if (Input::exists()) {
 
             $login = $user->login(Input::get('email'), Input::get('password'), $remember);
 
-            Redirect::to("index.php");
+            Redirect::to("task_1.php");
 
         } else {
             foreach ($validation->errors() as $error) {

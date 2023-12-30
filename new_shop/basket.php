@@ -1,8 +1,7 @@
 <?php
 
 require_once 'function/function.php';
-
-$id = $_POST['id'];
+checking_allBasket()
 ?>
 <!doctype html>
 <html lang="en">
@@ -15,18 +14,31 @@ $id = $_POST['id'];
     <title>Document</title>
 </head>
 <body>
+<div class="header layout__content">
+    <div class="layout__head">
+        <div class="logo typography_h2">Copy Star</div>
+        <div class="menu typography_p1">
+            <div><a class="link" href="index.php">О нас</a></div>
+            <div><a class="link" href="catalog.php" >Каталог</a></div>
+            <div><a class="link" href="product.php">Товар</a></div>
+            <div><a class="link" href="#" style="color: #0a6ebd">Корзина</a></div>
+            <div><a class="link" href="index.php">Где нас найти</a></div>
+        </div>
+    </div>
+</div>
     <div class="products layout__content">
-        <?php foreach (conclusion_cards() as $card):?>
-            <?php if ($card['id'] == $id):?>
+        <?php foreach (checking_basket() as $cards):?>
+            <form action="delete_basket.php" method="post">
+                <input style="display: none" type="number" name="id" value="<?php echo $cards['id']?>">
                 <div class="product">
-                    <div class="printer"><img src="pictures/<?php echo $card['image']?>"></div>
-                    <h2 class="product__name"><?php echo $card['title']?></h2>
+                    <div class="printer"><img src="pictures/<?php echo $cards['image']?>"></div>
+                    <h2 class="product__name"><?php echo $cards['title']?></h2>
                     <div class="product__info-row typography_h4">
-                        <span><?php echo $card['price']?></span>
+                        <span><?php echo $cards['price']?></span>
                     </div class="div-basket">
                     <button style="border: 0" class="button-basket text">Delete</button>
                 </div>
-            <?php endif;?>
+            </form>
         <?php endforeach;?>
     </div>
 </body>

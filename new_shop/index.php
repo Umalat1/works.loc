@@ -21,6 +21,7 @@ conclusion_cards()
                 <div><a class="link"  href="#" style="color: #0a6ebd">О нас</a></div>
                 <div><a class="link" href="catalog.php">Каталог</a></div>
                 <div><a class="link" href="product.php">Товар</a></div>
+                <div><a class="link" href="basket.php">Корзина</a></div>
                 <div><a class="link" name="location">Где нас найти</a></div>
                 <div>
                     <?php if(isset($_SESSION['user'])){?>

@@ -4,7 +4,7 @@ class Person{
     public $age;
     const ID = 11;
 
-    public function __construct($name, $age){//конструктор вызывается автоматически при создании объекта
+    public function __construct($name, Int $age){//Int, String, bool
         $this->name = $name;
         $this->age = $age;
     }
@@ -34,4 +34,13 @@ class Person{
     }
 }
 
-Person::saySomething();
+//public $student;
+class University{
+
+    public function __construct(array $student){
+        var_dump($student);
+    }
+}
+
+$myPerson = new Person('Umalat',18);
+//new University([123, 222]);

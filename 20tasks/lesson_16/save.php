@@ -8,9 +8,9 @@
     $statement = $pdo->prepare($sql);
     $statement->execute(['name' => $name]);
     $task = $statement->fetch(PDO::FETCH_ASSOC);
-//    var_dump($task);
+//    var_dump($lesson_1);
 
     $_SESSION['user'] = $task;
 //    var_dump($_SESSION['user']);
 
-    header('location: /20tasks/lesson_16/index.php');
+    header('location: /20tasks/lesson_16/task_1.php');

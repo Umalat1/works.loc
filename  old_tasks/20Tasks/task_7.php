@@ -130,7 +130,7 @@
 
             <div class="row js-list-filter" id="js-contacts">
 
-                <?php foreach ($users as $user):?>
+                    <?php foreach ($users as $user):?>
 
                 <div class="col-xl-4">
                     <div id="c_<?php echo $user['id']?>" class="card border shadow-0 mb-g shadow-sm-hover" data-filter-tags="<?php echo $user['tags']?>">

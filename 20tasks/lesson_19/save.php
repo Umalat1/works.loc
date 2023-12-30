@@ -14,7 +14,7 @@ for ($i=0; $i < count($_FILES['image']['name']); $i++) {
         move_uploaded_file($tmp_name, 'uploads/' . $filename);
 
     }
-    header('location: /20tasks/lesson_19/index.php');
+    header('location: /20tasks/lesson_19/task_1.php');
 
 //    var_dump($result);
 //    exit;

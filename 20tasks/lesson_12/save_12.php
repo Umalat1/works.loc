@@ -1,16 +1,13 @@
 <?php
-<<<<<<< HEAD
-session_start();
-=======
-    session_start();
 
->>>>>>> origin/main
+//session_start();
+
+
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     $pdo = new PDO('mysql:host=localhost;dbname=tasks','root','');
 
-<<<<<<< HEAD
     $sql = "SELECT * FROM lesson_12 WHERE email=:email";
     $statement = $pdo->prepare($sql);
     $statement->execute(['email' => $email]);
@@ -29,7 +26,7 @@ session_start();
     $statement->execute(['email'=>$email, 'password'=>$hash_password]);
 
     header('location: /20tasks/lesson_12/task_12.php');
-=======
+
     $sql = "SELECT * FROM task_12 WHERE email=:email";
     $statement = $pdo->prepare($sql);
     $statement->execute(['email' => $email]);
@@ -49,4 +46,4 @@ session_start();
     $statement = $pdo->prepare($sql);
     $statement->execute(['email' =>$email, 'password' => $password]);
     header('Location: \20tasks\lesson_12\task_12.php');
->>>>>>> origin/main
+

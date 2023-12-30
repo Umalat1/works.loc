@@ -18,7 +18,7 @@ if (Input::exists()) {
             if(password_verify(Input::get('current_password'), $user->data()->password)) {
                 $user->update(['password' => password_hash(Input::get('new_password'), PASSWORD_DEFAULT)]);
                 Session::flash('success', 'Password has been updated.');
-                Redirect::to('index.php');
+                Redirect::to('task_1.php');
             } else {
                 echo "Invalid current password";
             }
