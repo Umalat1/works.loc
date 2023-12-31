@@ -155,3 +155,19 @@ body{
     text-align: center;
     background: #2a2d35;
 }
+.add{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.add_menu div{
+    margin-top: 20px;
+}
+.add div form div{
+    margin-top: 10px;
+}
+.delete_menu{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}

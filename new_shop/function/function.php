@@ -78,7 +78,8 @@
         $delete = $statement->execute();
         return $delete;
     }
-    function basket($image, $title, $price){
+    function basket($image, $title, $price)
+    {
         $pdo = base('shop');
         $sql = "INSERT INTO basket (image, title, price) VALUES (:image, :title, :price)";
         $statement = $pdo->prepare($sql);

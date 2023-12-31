@@ -9,9 +9,15 @@ require_once '../function/function.php';
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
 <body>
+<div class="delete_menu layout__content">
+    <div><a class="link" href="add.php">Добавить</a> </div>
+    <div><a class="link" href="delete.php">Удалить</a></div>
+    <div><a class="link" href="../index.php">Вернуться к сайту</a></div>
+</div>
 <div class="products layout__content">
     <?php foreach (conclusion_cards() as $card):?>
         <form action="delete_handler.php" method="post">
