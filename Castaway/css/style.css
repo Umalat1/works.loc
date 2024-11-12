@@ -2,19 +2,19 @@ body{
     background-color: #191919;
 }
 .header__menu{
-    padding-top: 44px;
     padding-bottom: 44px;
+    padding-top: 44px;
 }
 .vertical-alignment{
     align-items: center;
 }
 .flex-space-between{
-    display: flex;
     justify-content: space-between;
+    display: flex;
 }
 .flex-space-evenly {
-    display: flex;
     justify-content: space-evenly;
+    display: flex;
 }
 .header__nav{
     width: 403px;
@@ -25,10 +25,14 @@ body{
 .main{
     margin-top: 40px;
 }
+.wrap{
+    max-width: 1300px;
+    margin: auto;
+}
 .main-img img{
-    width: 650px;
-    height: 875px;
     object-fit: cover;
+    height: 875px;
+    width: 650px;
 }
 .main__text{
     font-size: 70px;
@@ -46,11 +50,51 @@ body{
     padding-bottom: 16px;
     font-size: 15px;
 }
-.main__questions-wrap{
+.main__episode-wrap{
     background-color: black;
-    height: 545px;
-    max-width: 1300px;
-    margin: auto;
-    margin-top: 66px;
+    align-items: center;
     border-radius: 32px;
+    margin-top: 66px;
+    height: 545px;
+}
+.main__episode-image{
+    margin-left: 40px;
+}
+.flex{
+    display: flex;
+}
+.main__episode-card{
+    height: 465px;
+    margin-left: 53px;
+}
+.episode-card__category{
+    background-color: #191919;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 18px;
+    height: 27px;
+    width: 73px;
+}
+.episode-card__number{
+    margin-top: 48px;
+    font-size: 17px;
+    color: #118DA8;
+}
+.episode-card__title{
+    margin-top: 17px;
+    font-size: 64px;
+}
+.episode-card__description{
+    margin-top: 28px;
+    font-size: 22px;
+}
+.episode-card__link{
+    background-color: #118DA8;
+    align-items: center;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 18px;
+    font-size: 18px;
+    width: 208px;
+    height: 51px;
 }
