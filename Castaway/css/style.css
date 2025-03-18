@@ -1,100 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
+    
     background-color: #191919;
 }
-.header__menu{
-    padding-bottom: 44px;
-    padding-top: 44px;
+.wrap {
+    width: 1300px;
+    margin: 0 auto;
 }
-.vertical-alignment{
+
+.header__inner {
+    height: 120px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-.flex-space-between{
+
+.header__menu {
+    width: 400px;
+    display: flex;
     justify-content: space-between;
-    display: flex;
+    align-items: center;
 }
-.flex-space-evenly {
-    justify-content: space-evenly;
-    display: flex;
-}
-.header__nav{
-    width: 403px;
-}
-.link{
+.header__menu a {
     text-decoration: none;
 }
-.main{
+
+.text-white {
+    color: #fff;
+}
+
+.header__hero-content{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__hero-image{
+    width: 650px;
+    height: 873px;
+    object-fit: cover;
+}
+
+.hero-title{
+    font-size:70px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-title span{
+    font-size:80px;
+}
+
+.hero-platforms{
+    margin-top: 75px;
+}
+
+.platform-icons{
+    margin-top: 15px;
+    width: 245px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.episode-card:first-child{
     margin-top: 40px;
 }
-.wrap{
-    max-width: 1300px;
-    margin: auto;
-}
-.main-img img{
-    object-fit: cover;
-    height: 875px;
-    width: 650px;
-}
-.main__text{
-    font-size: 70px;
-}
-.text-bold{
-    font-weight: bold;
-}
-.color-text-white{
-    color: white;
-}
-.main__link{
-    margin-top: 74px;
-}
-.main__link-text{
-    padding-bottom: 16px;
-    font-size: 15px;
-}
-.main__episode-wrap{
-    background-color: black;
-    align-items: center;
-    border-radius: 32px;
-    margin-top: 66px;
-    height: 545px;
-}
-.main__episode-image{
-    margin-left: 40px;
-}
-.flex{
+.episodes__title-container{
+    margin-top: 100px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
 }
-.main__episode-card{
-    height: 465px;
-    margin-left: 53px;
+
+.episodes__title{
+    font-size: 65px;
+    font-weight: 700;
 }
-.episode-card__category{
-    background-color: #191919;
-    text-align: center;
-    border-radius: 6px;
-    font-size: 18px;
+
+a {
+    text-decoration: none;
+}
+
+.episode-card__image img{
+    object-fit: cover;
+    width: 390px;
+    height: 430px;
+}
+
+.button{
+    color: #fff;
+    background-color:#118DA8;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.episode-card{
+    display: flex;
+    border-radius: 30px;
+    background-color: #000000;
+    padding: 40px;
+}
+
+.episode-card:not(:first-child){
+    margin-top: 60px;
+}
+
+.episode-card__title {
+    font-size: 65px;
+    margin-top: 18px;
+}
+
+.episode-card__text {
+    color: #FFFFFFB2;
+    font-size: 22px;
+    line-height: 1.6;
+    margin-top: 30px;
+}
+
+.episode-card__content {
+    margin-left: 50px;
+}
+/* Усиливаем специфичность для текста в карточках */
+.episode-card__title.text-white,
+.episode-card__text.text-white {
+    color: #fff !important;
+}
+
+.episodes__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.episode-card__tag {
+    display: inline-block;
+    padding: 0 16px;
     height: 27px;
-    width: 73px;
+    line-height: 27px;
+    background: #191919;
+    border-radius: 6px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.episode-card__button{
+    margin-top: 20px;
 }
 .episode-card__number{
-    margin-top: 48px;
-    font-size: 17px;
     color: #118DA8;
+    margin-top: 45px;
 }
-.episode-card__title{
-    margin-top: 17px;
-    font-size: 64px;
+.about{
+    margin-top: 260px;
 }
-.episode-card__description{
-    margin-top: 28px;
-    font-size: 22px;
-}
-.episode-card__link{
-    background-color: #118DA8;
+.about__content {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    border-radius: 6px;
+    gap: 60px;
+}
+
+.about__image img {
+    width: 650px;
+    height: 743px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about__text {
+    max-width: 550px;
+}
+.about__heading {
+    font-size: 65px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.about__description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about__button {
+    border-radius: 50%;
+    background-color: #118DA8;
+    width: 112px;
+    height: 112px;
     text-align: center;
-    margin-top: 18px;
-    font-size: 18px;
-    width: 208px;
-    height: 51px;
+}
+.about__button img{
+    margin-top: 38px;
+}
+.contact{
+    margin-top: 100px;
+}
+.contact__content{
+    height: 387px;
+    display: flex;
+    background-color: #000000;
+    border-radius: 32px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contact__title{
+    font-size: 72px;
+}
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact__form input{
+    font-size: 24px;
+    width: 400px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: #191919;
+    
+}
+
+.comments{
+    margin-top: 200px;
+}
+
+.comments__block {
+    background-color: #000000;
+    border-radius: 32px;
+    width: 423px;
+    height: 321px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.comments__content{
+    margin-top: 20px;
+    font-size: 36px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.comments__name{
+    margin-top: 20px;
+    font-size: 24px;
+    color: #FFFFFFB2;
+}
+
+.footer{
+    margin-top: 200px;
+}
+
+.footer__content{
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__menu{
+    font-size: 17px;
+}
+.footer__social{
+    font-size: 17px;
 }

@@ -1,69 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Castaway</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
 </head>
 <body>
-<div class="header">
-    <div class="wrap">
-        <div class="header__menu flex-space-between vertical-alignment">
-            <div class="header__logo">
-                <img src="images/logo.png" alt="logo">
-            </div>
-            <div class="header__nav flex-space-between">
-                <a class="color-text-white link" href="#">Home</a>
-                <a class="color-text-white link" href="#">Episodes</a>
-                <a class="color-text-white link" href="#">About</a>
-                <a class="color-text-white link" href="#">Contact</a>
-            </div>
-        </div>
-    </div>
-
-</div>
-<div class="main">
-    <div class="wrap">
-        <div class="main__content flex-space-between vertical-alignment">
-            <div class="main-img">
-                <img src="images/IMAGE.png" alt="">
-            </div>
-            <div class="main__container">
-                <div class="main__text color-text-white">
-                    <div>Take your<br> podcast to the</div>
-                    <div>next <span class="text-bold">level</span></div>
+    <div class="header">
+        <div class="wrap">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <h1 class="text-white">Castaway</h1>
                 </div>
-                <div class="main__link">
-                    <div class="main__link-text color-text-white">Listen on</div>
-                    <img src="images/IMAGE%20(1).png" alt="">
-                    <img src="images/IMAGE%20(2).png" alt="">
-                    <img src="images/Group.png" alt="">
-                    <img src="images/IMAGE%20(3).png" alt="">
-                    <img src="images/IMAGE%20(4).png" alt="">
+                <div class="header__menu">
+                    <div><a class="text-white" href="#">Home</a></div>
+                    <div><a class="text-white" href="#">Episodes</a></div>
+                    <div><a class="text-white" href="#">About</a></div>
+                    <div><a class="text-white" href="#">Contact</a></div>
                 </div>
             </div>
-
-        </div>
-        <div class="main__episode">
-            <div class="main__episode-wrap flex">
-                <div class="main__episode-image">
-                    <img src="images/IMAGE%20(5).png" alt="">
-                </div>
-                <div class="main__episode-card color-text-white">
-                    <div class="episode-card__category">Gear</div>
-                    <div class="episode-card__number">Episode 3</div>
-                    <div class="episode-card__title">Should you get<br> outboard audio gear?</div>
-                    <div class="episode-card__description">
-                        Is hardware really worth it when it comes to podcasting? The answer is...it<br>
-                        depends. Here’s our reasons on why you might want to consider picking<br>
-                        something up.
+            
+            <div class="header__hero">
+                <div class="header__hero-content">
+                    <div class="header__hero-image">
+                        <img src="img/podcast_studio.png" alt="Podcast Studio" width="650" height="873">
                     </div>
-                        <a class="episode-card__link" href="#">View Episode Details</a>
+                    <div class="header__hero-text">
+                        <div class="hero-title text-white">
+                            Take your<br>
+                            podcast to the<br>
+                            next <span>level</span>
+                        </div>
+                        <div class="hero-platforms">
+                            <p class="text-white">Listen on</p>
+                            <div class="platform-icons">
+                                <img src="img/spotify.png" alt="Spotify">
+                                <img src="img/pocket_casts.png" alt="Pocket Casts">
+                                <img src="img/apple-podcasts.png" alt="Apple Podcasts">
+                                <img src="img/podcast-addict.png" alt="Podcast Addict">
+                                <img src="img/soundCloud.png" alt="SoundCloud">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-</div>
-</body>
-</html>
+    <div class="episodes">
+        <div class="wrap">
+            <div class="episodes__title-container">
+                <div class="episodes__title text-white">Latest episodes</div>
+                <a href="#" class="button text-white">View all episodes</a>
+            </div>
+            
+            <div class="episodes__list">
+                <div class="episode-card">
+                    <div class="episode-card__image">
+                        <img src="img/episode1.png" alt="Audio gear">
+                    </div>
+                    <div class="episode-card__content">
+                        <div class="episode-card__tag">Gear</div>
+                        <div class="episode-card__number">Episode 3</div>
+                        <h3 class="episode-card__title text-white">Should you get outboard audio gear?</h3>
+                        <p class="episode-card__text">Is hardware really worth it when it comes to podcasting? The answer is, it depends. Here's our reasons on why you might want to consider picking up some hardware.</p>
+                        <div class="episode-card__button">
+                            <a href="#" class="button text-white">View Episode Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="episode-card">
+                    <div class="episode-card__image">
+                        <img src="img/episode2.png" alt="Microphone">
+                    </div>
+                    <div class="episode-card__content">
+                        <div class="episode-card__tag">Tips & Tricks</div>
+                        <div class="episode-card__number">Episode 2</div>
+                        <h3 class="episode-card__title text-white">Mic tricks to take you to the next level</h3>
+                        <p class="episode-card__text">Stop rolling with those default settings on your mic. These small tweaks will take you from sounding good to great.</p>
+                        <div class="episode-card__button">
+                            <a href="#" class="button text-white">View Episode Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="episode-card">
+                    <div class="episode-card__image">
+                        <img src="img/episode3.png" alt="Best microphone">
+                    </div>
+                    <div class="episode-card__content">
+                        <div class="episode-card__tag">Gear</div>
+                        <div class="episode-card__number">Episode 1</div>
+                        <h3 class="episode-card__title text-white">The best microphone under $200</h3>
+                        <p class="episode-card__text">With so many microphones on the market, how are you supposed to know what's the best? Take a look at our top picks.</p>
+                        <div class="episode-card__button">
+                            <a href="#" class="button text-white">View Episode Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="wrap">
+            <div class="about__content">
+                <div class="about__text">
+                    <div class="about__button">
+                        <img src="img/IMAGE (9).png" alt="About us">
+                    </div>
+                    <h2 class="about__heading text-white">Jacob Paulaner</h2>
+                    <p class="about__description">
+                        Jacob has a background in audio engineering, and has<br>
+                        been podcasting since the early days.
+                        <br>
+                        <br>
+                        He’s here to help you level up your game by sharing <br>
+                        everything he’s learned along the way.
+                    </p>
+                </div>
+                <div class="about__image">
+                    <img src="img/Frame.png" alt="About us">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="wrap">
+            <div class="contact__content">
+                <div class="contact__text">
+                    <p style="color: #118DA8;">Email Newsletter</p>
+                    <div class="contact__title">
+                        <h2 class="text-white">Subscribe <br> for updates</h2>
+                    </div>
+                    <div></div>
+                </div>
+                <div class="contact__form">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <button class="button text-white">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comments">
+        <div class="wrap">
+            <div class="comments__content">
+                <div class="comments__block">
+                    <div class="comments__grade">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                    </div>
+                    <div class="comments__content">
+                        <p class="text-white">I can’t recommend this podcast enough</p >
+                    </div>
+                    <div class="comments__name">
+                        <p>Betty Lacey</p>
+                    </div>
+                </div>
+
+                <div class="comments__block">
+                    <div class="comments__grade">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                    </div>
+                    <div class="comments__content">
+                        <p class="text-white">I can’t recommend this podcast enough</p >
+                    </div>
+                    <div class="comments__name">
+                        <p>Betty Lacey</p>
+                    </div>
+                </div>
+
+                <div class="comments__block">
+                    <div class="comments__grade">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                        <img src="img/star.png" alt="Star">
+                    </div>
+                    <div class="comments__content">
+                        <p class="text-white">I can’t recommend this podcast enough</p >
+                    </div>
+                    <div class="comments__name">
+                        <p>Betty Lacey</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="wrap">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <h1 class="text-white">Castaway</h1>
+                </div>
+                <div class="footer__menu">
+                    <div><a class="text-white" href="#">Home</a></div>
+                    <div><a class="text-white" href="#">Episodes</a></div>
+                    <div><a class="text-white" href="#">About</a></div>
+                    <div><a class="text-white" href="#">Contact</a></div>
+                </div>
+                <div class="footer__social">
+                    <div><a class="text-white" href="#">Style Guide</a></div>
+                    <div><a class="text-white" href="#">Instructions</a></div>
+                    <div><a class="text-white" href="#">Changelog</a></div>
+                    <div><a class="text-white" href="#">Credit</a></div>
+                    <div><a class="text-white" href="#">Powered by Webflow</a></div>
+                    <div><a class="text-white" href="#">Licenses</a></div>
+                </div>
+                <div class="footer__social-icons">
+                    <img src="img/spotify.png" alt="Spotify">
+                    <img src="img/pocket_casts.png" alt="Pocket Casts">
+                    <img src="img/apple-podcasts.png" alt="Apple Podcasts">
+                    <img src="img/podcast-addict.png" alt="Podcast Addict">
+                    <img src="img/soundCloud.png" alt="SoundCloud">
+                </div>
+            </div>
+        </div>
+    </div>
