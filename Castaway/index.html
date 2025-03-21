@@ -7,20 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="home">
         <div class="wrap">
             <div class="header__inner">
                 <div class="header__logo">
                     <h1 class="text-white">Castaway</h1>
                 </div>
-                <div class="header__menu">
-                    <div><a class="text-white" href="#">Home</a></div>
-                    <div><a class="text-white" href="#">Episodes</a></div>
-                    <div><a class="text-white" href="#">About</a></div>
-                    <div><a class="text-white" href="#">Contact</a></div>
-                </div>
+                
+                <nav class="header__menu">
+                    <div><a class="text-white" href="#home">Home</a></div>
+                    <div><a class="text-white" href="#episodes">Episodes</a></div>
+                    <div><a class="text-white" href="#about">About</a></div>
+                    <div><a class="text-white" href="#contact">Contact</a></div>
+                </nav>
             </div>
-            
+
+            <div class="themeToggle">
+                    <button class="themeToggle__button text-white" id="themeToggleButton">
+                        поменять тему
+                    </button>
+                </div>
+
             <div class="header__hero">
                 <div class="header__hero-content">
                     <div class="header__hero-image">
@@ -48,7 +55,7 @@
         </div>
     </div>
 
-    <div class="episodes">
+    <div class="episodes" id="episodes">
         <div class="wrap">
             <div class="episodes__title-container">
                 <div class="episodes__title text-white">Latest episodes</div>
@@ -104,7 +111,7 @@
         </div>
     </div>
 
-    <div class="about">
+    <div class="about" id="about">
         <div class="wrap">
             <div class="about__content">
                 <div class="about__text">
@@ -128,7 +135,7 @@
         </div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="wrap">
             <div class="contact__content">
                 <div class="contact__text">
@@ -136,7 +143,6 @@
                     <div class="contact__title">
                         <h2 class="text-white">Subscribe <br> for updates</h2>
                     </div>
-                    <div></div>
                 </div>
                 <div class="contact__form">
                     <input type="text" placeholder="Name">
@@ -231,3 +237,6 @@
             </div>
         </div>
     </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

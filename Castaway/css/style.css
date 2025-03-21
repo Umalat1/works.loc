@@ -3,10 +3,22 @@
     padding: 0;
 }
 
-body{
-    
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: background-color 0.3s ease;
+}
+
+body.dark-theme {
     background-color: #191919;
 }
+
+body.light-theme {
+    background-color: #ffffff;
+}
+
 .wrap {
     width: 1300px;
     margin: 0 auto;
@@ -17,7 +29,12 @@ body{
     align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+}
+
+.themeToggle__button{
+    background-color: #118DA8;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
 .header__menu {
@@ -33,6 +50,7 @@ body{
 .text-white {
     color: #fff;
 }
+
 
 .header__hero-content{
     margin-top: 40px;
